@@ -10,10 +10,11 @@
 *.obj
 *.pdb
 *.idb
-!*.exe
 !*.lib
 !*.dll
 !*.h
 !*.c
 !*.cpp
 .vs
+.exe
+x64/*
