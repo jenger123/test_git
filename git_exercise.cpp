@@ -10,8 +10,9 @@ void ToLowerCase(char str[], int strsize)
         if (int(str[i]) <= 90 && int(str[i]) >= 65)
             str[i] = char(int(str[i] + 32));
     }
+}
 
-char*  DeleteSpaces(char InputStr[], int ArraySize)
+char *  DeleteSpaces(char InputStr[], int ArraySize)
 {
     int ptr1 = 0, spaces = 0, ptr2 = ArraySize-2;
     while (InputStr[ptr1] == ' ')
@@ -53,6 +54,10 @@ int main()
     char str[] = "    hi       my    name is    Leonid   ";
     auto SizeStr = sizeof(str) / sizeof(str[0]);
     char* str1 = DeleteSpaces(str, SizeStr);
+        int str1size = 0;
+    for (int i{}; str1[i] != '\0'; i++)
+        str1size++;
+    ToLowerCase(str1, str1size + 1);
     for (int i{}; str1[i] != '\0'; i++)
         cout << str1[i];
     delete[] str1;
