@@ -1,6 +1,7 @@
 ﻿// Шаги, выполняемые в этом файле будут отражены в Git
 
 #include <iostream>
+#include "kk.h"
 using namespace std;
 
 void ToLowerCase(char str[], int strsize)
@@ -51,7 +52,10 @@ char *  DeleteSpaces(char InputStr[], int ArraySize)
 int main()
 {
     setlocale(LC_ALL, "rus");
-    char str[] = "    hi       my    name is    Leonid   ";
+    char str[] = "  created    BY  Krupin    Konstantin and RodioNOV LeONid   ";
+    char str_krupin[] = "Krupin KV make this";
+    auto sstr = get_FIO_KK(str_krupin);
+    cout << get_group_id() << endl << str_krupin << endl;
     auto SizeStr = sizeof(str) / sizeof(str[0]);
     char* str1 = DeleteSpaces(str, SizeStr);
         int str1size = 0;
@@ -60,6 +64,7 @@ int main()
     ToLowerCase(str1, str1size + 1);
     for (int i{}; str1[i] != '\0'; i++)
         cout << str1[i];
+    cout << endl;
     delete[] str1;
     system("pause");
     return 0;
